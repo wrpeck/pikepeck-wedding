@@ -134,7 +134,7 @@ function App() {
                 <h3>Sarah and Wesley</h3>
                 <h2>Pike-Peck Family</h2>
                 <div className='mobile-textbox'>
-                  <p>Thanks for visiting our new family site!  You can browse the pie fillings belowf or recommendations on how to use them.  If you took photos at the wedding and you want to share, click the button below</p>
+                  <p>Thanks for visiting our new family site!  You can browse the pie fillings below for recommendations on how to use them.  If you took photos at the wedding and you want to share, click the button below</p>
                 </div>
                 <button className='mobile-button' onClick={() => {openInNewTab(photoLink)}}>Share Photos</button>
                 

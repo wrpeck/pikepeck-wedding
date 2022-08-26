@@ -19,10 +19,13 @@
 }
 
 .button-div {
-    position: absolute;
+    position: sticky;
     top: 5px;
     left: 5px;
     justify-content: left;
+    width: 15vw;
+    min-width: 170px;
+    margin-top: 10px;
 }
 
 .mobile-button-div {
@@ -72,7 +75,7 @@
 
 .textbox {
     border: 1px black solid;
-    width: 50%;
+    width: 60vw;
     margin: 0 auto;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -87,6 +90,7 @@
     border: 1px black solid;
     width: 100vw;
     margin: 0 auto;
+    margin-top: -10px;
     background-color: white;
     border-radius: 5px;
     justify-content: left;
