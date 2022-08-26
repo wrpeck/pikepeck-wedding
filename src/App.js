@@ -31,6 +31,7 @@ function App() {
 
   const cutePicture = 'https://piedcf957b765c74ad4b59c15553acb98e8210024-dev.s3.us-west-1.amazonaws.com/public/sarahandwesley6.jpg';
   const photoLink = 'https://photos.app.goo.gl/PmGWFJxzedwWWMbv5';
+  const icebreakerLink = 'https://drive.google.com/drive/folders/15OaK-YTYpDvSlnThYCnlO3-oDRG0GGw4?usp=sharing';
 
 
   useEffect(() => {
@@ -69,13 +70,13 @@ function App() {
           'Jobs' : {
             children: 'Share Pictures',
             onClick: () => {
-              openInNewTab('https://photos.app.goo.gl/PmGWFJxzedwWWMbv5')
+              openInNewTab(photoLink)
             }
           },
           'Applicants' : {
             children: 'Icebreakers',
             onClick: () => {
-              openInNewTab('https://drive.google.com/drive/folders/15OaK-YTYpDvSlnThYCnlO3-oDRG0GGw4?usp=sharing')
+              openInNewTab(icebreakerLink)
             }
           },
           'Company' : {
@@ -136,8 +137,19 @@ function App() {
                   <p>Thanks for visiting our new family site!  You can browse the pie fillings belowf or recommendations on how to use them.  If you took photos at the wedding and you want to share, click the button below</p>
                 </div>
                 <button className='mobile-button' onClick={() => {openInNewTab(photoLink)}}>Share Photos</button>
+                
               </div>
             )}
+            <div className='pie-header'>
+                <h1>Have Some Conversation</h1>
+              </div>
+            <div className='icebreaker-div'>
+              <div className={isDesktop ? 'icebreaker-content' : 'icebreaker-content-mobile'}>
+                <p>Weddings can be super awkward.  We tried to seat you with friends and family, but seating charts are hard!</p>
+                <p>If you need some social lubricant, we put together curated discussion questions for each table - click below, and find your table's questions.</p>
+              </div>
+              <button className={isDesktop ? 'icebreaker-button' : 'mobile-button'} onClick={() => {openInNewTab(icebreakerLink)}}>Get Icebreakers</button>
+            </div>
             <hr />
             <div className='card-panel' style={styles.cardPanel}>
               <div className='pie-header'>
@@ -168,7 +180,6 @@ function App() {
                       tags: item.tags,
                     });
                     window.scrollTo(0,0);
-                    console.log(fillingPage.tags);
                   },
                   border: isShown && (cardID===item.id ? '1px black solid' : ''),
                   overrides: {
@@ -194,8 +205,6 @@ const styles={
   card: {
     flexWrap: 'wrap',
     justifyContent: 'center'
-  },
-  hero: {
   },
   app: {
     backgroundColor: '#F0F0E5'
