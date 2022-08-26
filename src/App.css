@@ -36,3 +36,31 @@
     transform: rotate(360deg);
   }
 }
+
+.mobile-image {
+  width: 100vw;
+  object-fit: cover;
+}
+
+.mobile-textbox {
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.mobile-button {
+  width: 90vw;
+  height: 10vw;
+  background-color: #6D342C;
+  color: white;
+  font-weight: bolder;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.pie-header {
+  margin: -10px 0px 10px 0px;
+  border: 1px solid black;
+  color: white;
+  background-color: #365681;
+  
+}

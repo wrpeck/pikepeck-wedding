@@ -8,12 +8,12 @@ function PieDetails(props) {
 
     return (
         <div className='piedetails-main'>
-            <div className='button-div'>
-            <button id='back-button' 
-                onClick={() => {
-                    props.showPie({show: false});
-                }}
-            >&lt; Go Back</button>
+            <div className={props.isDesktop ? 'button-div' : 'mobile-button-div'}>
+                <button id='back-button' 
+                    onClick={() => {
+                        props.showPie({show: false});
+                    }}
+                >&lt; Go Back</button>
             </div>
             <div className='header'>
                 <div className='title'>
@@ -21,8 +21,8 @@ function PieDetails(props) {
                 </div>
             </div>
             <div className='body'>
-                <img className='pie-image' src={props.image} />
-                <div className='textbox'>
+                <img className={props.isDesktop ? 'pie-image' : 'pie-image-mobile'} src={props.image} />
+                <div className={props.isDesktop ? 'textbox' : 'textbox-mobile'}>
                     <h3>{props.shortdesc}</h3>
                     <ReactMarkdown>{props.longdesc}</ReactMarkdown>
                 </div>

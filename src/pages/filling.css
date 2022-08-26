@@ -1,5 +1,4 @@
 .piedetails-main {
-    height: 200%;
     width: 100%;
     background-color: #F0F0E5;
     /*background-color: aqua;*/
@@ -14,6 +13,11 @@
     object-fit: cover;
 }
 
+.pie-image-mobile {
+    width: 100vw;
+    object-fit: cover;
+}
+
 .button-div {
     position: absolute;
     top: 5px;
@@ -21,13 +25,19 @@
     justify-content: left;
 }
 
+.mobile-button-div {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+}
+
 #back-button {
   align-items: center;
-  background-color: hsl(7, 42%, 75%);
-  border-radius: 12px;
+  background-color: #6D342C;
+  border-radius: 4px;
   box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
   box-sizing: border-box;
-  color: #121212;
+  color: white;
   cursor: pointer;
   display: inline-flex;
   flex: 1 1 auto;
@@ -47,6 +57,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  width: 100%;
 }
 
 #back-button:hover {
@@ -67,6 +78,17 @@
     margin-bottom: 10px;
     background-color: white;
     border-radius: 15px;
+    justify-content: left;
+    text-align: left;
+    padding: 15px;
+}
+
+.textbox-mobile {
+    border: 1px black solid;
+    width: 100vw;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 5px;
     justify-content: left;
     text-align: left;
     padding: 15px;
